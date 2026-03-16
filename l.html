@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Coming Soon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow:hidden;
+}
+
+/* animated background glow */
+
+body::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#ff004c55,transparent);
+top:-200px;
+left:-200px;
+animation:move1 8s infinite alternate;
+}
+
+body::after{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#0066ff55,transparent);
+bottom:-200px;
+right:-200px;
+animation:move2 8s infinite alternate;
+}
+
+@keyframes move1{
+from{transform:translate(0,0);}
+to{transform:translate(120px,80px);}
+}
+
+@keyframes move2{
+from{transform:translate(0,0);}
+to{transform:translate(-120px,-80px);}
+}
+
+/* main card */
+
+.container{
+position:relative;
+width:460px;
+padding:50px;
+background:rgba(20,20,20,0.85);
+border-radius:20px;
+text-align:center;
+backdrop-filter:blur(10px);
+box-shadow:0 0 40px rgba(0,0,0,0.8);
+z-index:1;
+}
+
+/* headings */
+
+h1{
+font-size:46px;
+margin-bottom:10px;
+letter-spacing:2px;
+}
+
+.subtitle{
+color:#9ca3af;
+margin-bottom:25px;
+}
+
+.owner{
+font-size:18px;
+margin-bottom:35px;
+color:#e5e7eb;
+}
+
+/* contact */
+
+.contact{
+font-size:22px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+/* instagram button */
+
+.button a{
+text-decoration:none;
+background:linear-gradient(45deg,#ff004c,#ff4b7a);
+padding:14px 34px;
+border-radius:30px;
+font-weight:600;
+font-size:16px;
+color:white;
+display:inline-block;
+transition:all 0.3s ease;
+}
+
+.button a:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px rgba(255,0,76,0.7);
+}
+
+/* footer */
+
+.footer{
+margin-top:35px;
+font-size:13px;
+color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Coming Soon</h1>
+
+<div class="subtitle">
+This website is currently under development
+</div>
+
+<div class="owner">
+Domain owned by <strong>Swarnim Pratap Singh</strong>
+</div>
+
+<div class="contact">
+Contact
+</div>
+
+<div class="button">
+<a href="https://instagram.com/swarnim_pratap" target="_blank">
+Visit Instagram
+</a>
+</div>
+
+<div class="footer">
+© Swarnim Pratap Singh
+</div>
+
+</div>
+
+</body>
+</html>
